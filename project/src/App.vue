@@ -1,18 +1,33 @@
 <template>
   <div>
-    <div class="display-6 bg-dark text-primary">Hello</div>
-    <div class="row">
-      <div class="col-md-8 bg-secondary">One</div>
-      <div class="col-md-4 bg-info">Two</div>
-    </div>
-    </div>
+    <AppWrapper name="createX" />
+  </div>
 </template>
 
 <script>
-
+import AppWrapper from './components/AppWrapper.vue'
 export default {
-  name: 'App',
-}
+  name: "App",
+  components: {
+    AppWrapper,
+  }
+};
 </script>
+
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  :root {
+    --primary:#F0D290;
+    --secondary: #781D42;
+    --black: #000;
+    --font-default: 1rem;
+    --white: #fff;
+    --footer: #1F2133;       
+  }
+</style>
 
 
