@@ -73,12 +73,12 @@ export default {
         tl.to(".menu-icon p", { display: "none" })
           .to(rule1, { cssRule: { rotation: 45 } })
           .to(rule2, { cssRule: { rotation: -45, y: -12, x: 0.5 } }, "-=.4")
-          .to("ul.nav-list", { opacity: 0.8 }, "-=.3");
+          .to("ul.nav-list", { display: "block", opacity: 0.8 }, "-=.3");
       } else {
-          // extremely fast return
+        // extremely fast return
         tl.to(".menu-icon p", { display: "block" })
           .to(rule1, { cssRule: { rotation: 0 } }, "-=.4")
-          .to(rule2, { cssRule: { rotation: 0, x: 0, y: 0 } }, "-=.4")
+          .to(rule2, { cssRule: { rotation: 0, x: 0, y: 0 } }, "-=.4");
       }
     },
   },
@@ -139,6 +139,7 @@ nav {
   left: 105%;
   bottom: 0;
 }
+
 .nav-list li {
   list-style: none;
 }
@@ -152,13 +153,14 @@ li a:hover {
 @media screen and (max-width: 576px) {
   ul.nav-list {
     position: absolute;
-    top: 18%;
+    top: 10%;
     right: 0;
     left: 0;
     height: 350px;
     max-height: 350px;
     background-color: var(--white);
     opacity: 0;
+    display: none;
     padding: 1em 2em;
 
     z-index: 99;
@@ -166,6 +168,23 @@ li a:hover {
   .nav-list li {
     margin: 1em 0;
     padding: 0.5em 0;
+  }
+}
+@media screen and (min-width: 576px)  {
+  .nav-list {
+    display: flex !important;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+  }
+  .nav-list li:first-of-type {
+    display: none;
+  }
+  .navbar-brand {
+    width: 20%;
+  }
+  .menu-icon {
+    display: none;
   }
 }
 </style>
