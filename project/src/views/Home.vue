@@ -89,7 +89,7 @@ export default {
   text-decoration: none;
   color: black;
   padding: 1em;
-  max-width: 50%;
+  max-width: 60%;
   margin: 0.5em 0;
   font-size: 0.8em;
   border-radius: 5px;
