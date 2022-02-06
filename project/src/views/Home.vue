@@ -46,14 +46,44 @@
           </a>
         </div>
       </div>
-      <router-link :to="{'name': 'About'}" class="link-me">
-         <img
-        src="../assets/hero-img.png"
-        alt="Olanrewaju - I'm a Web and App developer"
-        class="hero-img"
-      />
+      <router-link :to="{ name: 'About' }" class="link-me">
+        <img
+          src="../assets/hero-img.png"
+          alt="Olanrewaju - I'm a Web and App developer"
+          class="hero-img"
+        />
       </router-link>
-     
+    </section>
+    <section class="offers">
+      <h1 class="underline-ui heading">What's in it for you?</h1>
+      <ol>
+        <li class>Pixel perfect designs.</li>
+        <li>
+          Fully responsive websites for mobile, desktops and other devices
+        </li>
+        <li>User-oriented websites</li>
+        <li>Optimized for speed and high traffic usage</li>
+        <li>Site analysis</li>
+      </ol>
+    </section>
+    <section class="featured-work">
+      <h1 class="heading underline-ui">Featured work</h1>
+      <div class="sample-section">
+        <img src="" alt="StickerCove" />
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla nihil
+          rem accusantium ducimus mollitia. Quisquam, ipsum id non nihil
+          voluptatum cumque molestias facere totam soluta cum, ab, assumenda
+          saepe temporibus.
+        </p>
+        <ul>
+          <li>lorem3</li>
+          <li>lorem3</li>
+          <li>lorem3</li>
+        </ul>
+        <a href="#" class="details">See details</a>
+      </div>
+      .
     </section>
   </div>
 </template>
@@ -64,11 +94,13 @@ export default {
 };
 </script>
 
-<style> 
-.hero {
+<style>
+section {
   font-family: "Montserrat";
   padding: 0 2em;
+  margin-bottom: 3rem;
 }
+
 .hero > div {
   margin-bottom: 2rem;
 }
@@ -100,7 +132,7 @@ export default {
   flex-basis: 30%;
 }
 .btns-cta > *:hover {
-  opacity: .6;
+  opacity: 0.6;
 }
 .btns-cta > *:first-child {
   background-color: var(--primary);
@@ -115,6 +147,29 @@ export default {
   width: 278px;
   height: 278px;
 }
+
+.heading {
+  font-family: "Playfair Display";
+  font-size: 2em;
+  text-align: center;
+  position: relative;
+}
+.offers ol > * {
+  margin-bottom: 1em;
+}
+.underline-ui::after {
+  content: "";
+  background-color: var(--primary);
+  width: 30%;
+  height: 3px;
+  align-self: center;
+  position: absolute;
+  bottom: 0;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+
 @media screen and (min-width: 576px) {
   .hero {
     display: flex;
@@ -136,11 +191,10 @@ export default {
   }
   .btns-cta > * {
     margin-right: 2rem;
-    padding-right: .5em;
+    padding-right: 0.5em;
   }
   .link-me {
     margin-right: 10%;
   }
-  
 }
 </style>
