@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section>
+    <section class="hero">
       <div>
         <div class="text-intro">
           <h1>
@@ -65,11 +65,11 @@ export default {
 </script>
 
 <style> 
-section {
+.hero {
   font-family: "Montserrat";
   padding: 0 2em;
 }
-section > div {
+.hero > div {
   margin-bottom: 2rem;
 }
 .text-intro {
@@ -116,12 +116,12 @@ section > div {
   height: 278px;
 }
 @media screen and (min-width: 576px) {
-  section {
+  .hero {
     display: flex;
     justify-content: space-between;
     /* align-items: center; */
   }
-  section > div {
+  .hero > div {
     margin: 0;
   }
   .text-intro h1 {
