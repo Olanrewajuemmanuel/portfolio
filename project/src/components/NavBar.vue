@@ -73,7 +73,7 @@ export default {
         tl.to(".menu-icon p", { display: "none" })
           .to(rule1, { cssRule: { rotation: 45 } })
           .to(rule2, { cssRule: { rotation: -45, y: -12, x: 0.5 } }, "-=.4")
-          .to("ul.nav-list", { display: "block", opacity: 0.8 }, "-=.3");
+          .to("ul.nav-list", { display: "block", opacity: 0.9 }, "-=.3");
       } else {
         // extremely fast return
         tl.to(".menu-icon p", { display: "block" })
@@ -86,6 +86,7 @@ export default {
 </script>
 
 <style>
+
 .router-link-exact-active {
   color: var(--primary);
 }
@@ -100,6 +101,8 @@ nav {
   background: var(--white);
   overflow: hidden;
   background-color: var(--white);
+  min-height: 20vh;
+
 }
 .navbar-brand {
   width: 80%;
@@ -153,7 +156,7 @@ li a:hover {
 @media screen and (max-width: 576px) {
   ul.nav-list {
     position: absolute;
-    top: 10%;
+    top: 20vh;
     right: 0;
     left: 0;
     height: 350px;
@@ -170,7 +173,7 @@ li a:hover {
     padding: 0.5em 0;
   }
 }
-@media screen and (min-width: 576px)  {
+@media screen and (min-width: 576px) {
   .nav-list {
     display: flex !important;
     justify-content: space-around;
