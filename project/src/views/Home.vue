@@ -46,10 +46,14 @@
           </a>
         </div>
       </div>
-      <img
+      <router-link :to="{'name': 'About'}" class="link-me">
+         <img
         src="../assets/hero-img.png"
         alt="Olanrewaju - I'm a Web and App developer"
+        class="hero-img"
       />
+      </router-link>
+     
     </section>
   </div>
 </template>
@@ -60,13 +64,16 @@ export default {
 };
 </script>
 
-<style>
+<style> 
 section {
   font-family: "Montserrat";
   padding: 0 2em;
 }
 section > div {
   margin-bottom: 2rem;
+}
+.text-intro {
+  user-select: none;
 }
 .text-intro h1 {
   font-family: "Playfair Display";
@@ -102,7 +109,7 @@ section > div {
   border: 1px solid var(--primary);
 }
 
-img {
+.hero-img {
   max-width: 100%;
   max-height: 100%;
   width: 278px;
@@ -111,6 +118,29 @@ img {
 @media screen and (min-width: 576px) {
   section {
     display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
   }
+  section > div {
+    margin: 0;
+  }
+  .text-intro h1 {
+    max-width: 35rem;
+  }
+  .text-intro p {
+    max-width: 500px;
+  }
+  .btns-cta {
+    display: flex;
+    align-items: center;
+  }
+  .btns-cta > * {
+    margin-right: 2rem;
+    padding-right: .5em;
+  }
+  .link-me {
+    margin-right: 10%;
+  }
+  
 }
 </style>
