@@ -1,11 +1,7 @@
 import NavBar from "@/components/NavBar";
+import { proximaFont } from "@/fonts";
 import "./globals.css";
-import localFont from '@next/font/local'
 
-const proximaFont = localFont({
-  src: '../FontsFree-Net-Proxima-Nova-Bold.otf',
-  display: 'optional',
-})
 
 export default function RootLayout({
   children,
